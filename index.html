@@ -1,60 +1,60 @@
 <!DOCTYPE HTML>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Tree menu</title>
+<head>
+  <meta charset="utf-8">
+  <title>Tree menu</title>
 
-    <style>
+  <style>
       .tree span:hover {
-        font-weight: bold;
+          font-weight: bold;
       }
 
       .tree span:hover {
-        cursor: pointer;
+          cursor: pointer;
       }
-    </style>
-  </head>
+  </style>
+</head>
 
-  <body>
-  <ul class="tree" id="tree">
-    <li>Animals
-      <ul>
-        <li>Mammals
-          <ul>
-            <li>Cows</li>
-            <li>Donkeys</li>
-            <li>Dogs</li>
-            <li>Tigers</li>
-          </ul>
-        </li>
-        <li>Other
-          <ul>
-            <li>Snakes</li>
-            <li>Birds</li>
-            <li>Lizards</li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li>Fishes
-      <ul>
-        <li>Aquarium
-          <ul>
-            <li>Guppy</li>
-            <li>Angelfish</li>
-          </ul>
-        </li>
-        <li>Sea
-          <ul>
-            <li>Sea trout</li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
-  </body>
+<body>
+<ul class="tree" id="tree">
+  <li>Animals
+    <ul>
+      <li>Mammals
+        <ul>
+          <li>Cows</li>
+          <li>Donkeys</li>
+          <li>Dogs</li>
+          <li>Tigers</li>
+        </ul>
+      </li>
+      <li>Other
+        <ul>
+          <li>Snakes</li>
+          <li>Birds</li>
+          <li>Lizards</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Fishes
+    <ul>
+      <li>Aquarium
+        <ul>
+          <li>Guppy</li>
+          <li>Angelfish</li>
+        </ul>
+      </li>
+      <li>Sea
+        <ul>
+          <li>Sea trout</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+</body>
 
-  <script>
+<script>
     // wrap <li>-elements in <span>-elements
     const listItems = document.getElementsByTagName('li');
     for (let listItem of listItems) {
@@ -71,5 +71,5 @@
         const ulElements = parent.querySelectorAll('ul');
         ulElements.forEach(element => element.hidden = !element.hidden)
     });
-  </script>
+</script>
 </html>
