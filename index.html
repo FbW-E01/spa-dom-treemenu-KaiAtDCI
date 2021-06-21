@@ -1,57 +1,63 @@
 <!DOCTYPE HTML>
 <html>
 
-<head>
-  <style>
-    .tree span:hover {
-      font-weight: bold;
-    }
+  <head>
+    <style>
+      .tree span:hover {
+        font-weight: bold;
+      }
 
-    .tree span {
-      cursor: pointer;
-    }
-  </style>
-  <meta charset="utf-8">
-</head>
+      .tree span {
+        cursor: pointer;
+      }
+    </style>
+    <meta charset="utf-8">
+  </head>
 
-<body>
+  <body>
+    <ul class="tree" id="tree">
+      <li>Animals
+        <ul>
+          <li>Mammals
+            <ul>
+              <li>Cows</li>
+              <li>Donkeys</li>
+              <li>Dogs</li>
+              <li>Tigers</li>
+            </ul>
+          </li>
+          <li>Other
+            <ul>
+              <li>Snakes</li>
+              <li>Birds</li>
+              <li>Lizards</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Fishes
+        <ul>
+          <li>Aquarium
+            <ul>
+              <li>Guppy</li>
+              <li>Angelfish</li>
+            </ul>
+          </li>
+          <li>Sea
+            <ul>
+              <li>Sea trout</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </body>
 
-  <ul class="tree" id="tree">
-    <li>Animals
-      <ul>
-        <li>Mammals
-          <ul>
-            <li>Cows</li>
-            <li>Donkeys</li>
-            <li>Dogs</li>
-            <li>Tigers</li>
-          </ul>
-        </li>
-        <li>Other
-          <ul>
-            <li>Snakes</li>
-            <li>Birds</li>
-            <li>Lizards</li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li>Fishes
-      <ul>
-        <li>Aquarium
-          <ul>
-            <li>Guppy</li>
-            <li>Angelfish</li>
-          </ul>
-        </li>
-        <li>Sea
-          <ul>
-            <li>Sea trout</li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
-
-</body>
+  <script>
+    const tree = document.getElementById('tree');
+    tree.addEventListener('click', e => {
+        const children = e.target.childNodes;
+        children.forEach(child => child.hidden = !child.hidden);
+    });
+  </script>
 </html>
