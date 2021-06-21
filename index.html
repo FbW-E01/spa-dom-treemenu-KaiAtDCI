@@ -64,12 +64,12 @@
         span.appendChild(node)
     }
 
-    // add event listener
+    // hide <ul>-elements on 'click'
     const tree = document.getElementById('tree');
     tree.addEventListener('click', e => {
         const parent = e.target.parentElement;
-        const ulItems = parent.querySelectorAll('ul');
-        ulItems.forEach(ul => ul.hidden = !ul.hidden)
+        const ulElements = parent.querySelectorAll('ul');
+        ulElements.forEach(element => element.hidden = !element.hidden)
     });
   </script>
 </html>
